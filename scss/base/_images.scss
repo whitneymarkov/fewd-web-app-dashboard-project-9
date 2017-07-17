@@ -1,0 +1,51 @@
+// ======================================
+//  Image styles
+// ======================================
+
+
+img {
+    width: 100%;
+}
+
+svg {
+    flex-shrink: 0;
+}
+
+.header-nav svg {
+    fill: $color-light;
+    transition: transform .3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+    @media ($brk-desktop) {
+        fill: $color-dark;
+    }
+}
+
+.main-nav-sidebar svg {
+    fill: $color-dark;
+    @media ($brk-desktop) {
+        fill: $color-light;
+    }
+}
+
+.main-nav-sidebar .active svg {
+    @media ($brk-desktop) {
+        fill: $color-dark;
+    }
+}
+
+.icon-x {
+    stroke: $color-light;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.small-size {
+    width: 1.5em;
+    height: 1.5em;
+}

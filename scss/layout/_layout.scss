@@ -1,0 +1,53 @@
+// ======================================
+//  Layout
+// ======================================
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header-nav {
+    @include flex($dir: row-reverse, $just: space-around);
+    align-items: center;
+    h1 {
+        margin-left: auto;
+        @media ($brk-desktop) {
+            margin-right: auto;
+            margin-left: 0;
+        }
+    }
+    @media ($brk-desktop) {
+        @include flex($dir: row);
+        .button {
+            display: none;
+        }
+        .user-name {
+            order: 3;
+        }
+        .icon-bell {
+            order: 1;
+        }
+        img {
+            order: 2;
+        }
+    }
+}
+
+.wrapper {
+    height: 100%;
+    @include flex($dir: row);
+}
+
+.main-nav-sidebar{
+    @include flex($dir: column);
+    .navigation {
+        @include flex ($dir: column, $just: space-between);
+        text-align: center;
+    }
+}

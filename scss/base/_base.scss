@@ -1,0 +1,30 @@
+// ======================================
+//  Base styles
+// ======================================
+
+* {
+  box-sizing: border-box;
+  //border: 1px solid lime;
+}
+
+body {
+    @include text($color: $color-light);
+}
+
+.wrapper {
+    background-color: $color-light;
+}
+
+// -----------------DRY Selectors------------------//
+
+.space-right {
+    margin-right: 1.5em;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-light {
+    font-weight: 300;
+}

@@ -1,0 +1,83 @@
+// ======================================
+//  Navigation styles
+// ======================================
+
+// -----------------Header Nav------------------//
+
+.header-nav {
+    background-color: $color-dark;
+    height: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    @media ($brk-desktop) {
+        background-color: $white;
+    }
+    h1 {
+        @include text($color: $color-light, $size: 1.5em);
+        @media ($brk-desktop) {
+            color: $color-dark;
+        }
+    }
+    .user-name {
+        display: none;
+        @include text($color: rgba(248, 248, 248, .7), $size: .9em);
+        @media ($brk-tablet) {
+            display: block;
+            padding-left: 1em;
+            padding-right: 1em;
+            border-left: 1px solid $color-medium;
+        }
+        @media ($brk-desktop) {
+            padding-right: 0;
+            color: $color-dark;
+        }
+    }
+
+}
+
+.button {
+    cursor: pointer;
+}
+
+// -----------------Main Nav------------------//
+
+.main-nav-sidebar {
+    background-color: $white;
+    width: 4em;
+    height: 100%;
+    box-shadow: 0 3px 6px rgba($color-dark,0.1), 0 3px 6px rgba($color-dark,0.1);
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform .3s;
+    @media ($brk-desktop) {
+        background-color: $color-dark;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 1em;
+            transition: all .3s;
+            &:hover {
+                border-left: 4px solid $color-accent-red;
+            }
+            &.active {
+                background-color: $color-light-medium;
+                border-left: 4px solid $color-accent-red;
+            }
+        }
+    }
+    ul li a {
+        display: block;
+    }
+
+}
+
+.sidebar-hidden {
+    transform: translate3d(-4em, 0px, 0px);
+    @media ($brk-desktop) {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+}
