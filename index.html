@@ -62,13 +62,34 @@
             <h1><span class="text-bold">Vor</span><span class="text-light">siche</span></h1>
             <span class="text-light user-name">Allison Anderson</span>
             <img class="rounded small-size space-right" src="img/user-img.jpg" alt="">
-            <svg class="small-size space-right icon-bell">
-                <use xlink:href="#icon-bell"></use>
-            </svg>
+            <div class="dropdown space-right">
+                <div class="alert-indicator show"></div>
+                <svg class="small-size icon-bell notificationBtn" tabindex="1" style="display: block" onclick="notificationsToggle()">
+                    <use xlink:href="#icon-bell"></use>
+                </svg>
+
+                <div id="notificationsDropdown" class="notification-content">
+                    <div class="notification">
+                        <input type="button" class="closebtn" onclick="this.parentElement.style.display='none';" value="&times;" tabindex="7">
+                        <span>You have <strong>5</strong> new followers</span>
+                    </div>
+                    <div class="notification">
+                        <input type="button" class="closebtn" onclick="this.parentElement.style.display='none';" value="&times;">
+                        <span><strong>10</strong> people liked your post</span>
+                    </div>
+                    <div class="notification">
+                        <input type="button" class="closebtn" onclick="this.parentElement.style.display='none';" value="&times;">
+                        <span><strong>3</strong> people shared your post</span>
+                    </div>
+                </div>
+
+            </div>
             <svg class="small-size space-right button">
                 <use xlink:href="#icon-menu"></use>
             </svg>
         </div>
+        <!-- Notifications modal ends -->
+
     </header>
 
     <!--- Wrapper starts -->
@@ -79,28 +100,28 @@
                 <ul class="navigation">
                     <li class=" button active">
                         <a href="#">
-                            <svg class="small-size">
+                            <svg class="small-size" tabindex="2">
                                 <use xlink:href="#icon-dashboard"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="button">
                         <a href="#">
-                            <svg class="small-size">
+                            <svg class="small-size" tabindex="3">
                                 <use xlink:href="#icon-members"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="button">
                         <a href="#">
-                            <svg class="small-size">
+                            <svg class="small-size" tabindex="4">
                                 <use xlink:href="#icon-visits"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="button">
                         <a href="#">
-                            <svg class="small-size">
+                            <svg class="small-size" tabindex="5">
                                 <use xlink:href="#icon-settings"></use>
                             </svg>
                         </a>
@@ -112,7 +133,10 @@
 
         <!-- Main content starts -->
         <main class="content">
-
+            <div class="alert">
+                <input type="button" class="closebtn" onclick="this.parentElement.style.display='none';" tabindex="6" value="&times;">
+                <span><strong>Alert</strong> Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</span>
+            </div>
 
 
 

@@ -9,6 +9,7 @@
 
 body {
     @include text($color: $color-light);
+    font-weight: 300;
 }
 
 .wrapper {

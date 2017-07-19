@@ -32,7 +32,6 @@
             color: $color-dark;
         }
     }
-
 }
 
 .button {
@@ -42,6 +41,7 @@
 // -----------------Main Nav------------------//
 
 .main-nav-sidebar {
+    z-index: 1000;
     background-color: $white;
     width: 4em;
     height: 100%;
