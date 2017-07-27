@@ -1,24 +1,45 @@
-const notifications = document.getElementsByClassName("notification-content");
-const indicator = document.getElementsByClassName("alert-indicator");
+//=====================================
+// Navigation
+//=====================================
 
-$(document).ready(function() {
+//header nav
+const headerNav = document.querySelector('.header-nav');
+const notificationBtn = document.getElementById('notificationBtn');
+const notificationsDropdown = document.getElementById('notificationsDropdown');
+const notifications = document.getElementsByClassName('notification-content');
 
-    // Toggle the sidebar navigation
-    $('.button').on('click', function() {
-        $('.main-nav-sidebar').toggleClass('sidebar-hidden');
-    });
+//close buttons
+const closeBtn = document.getElementsByClassName('closebtn');
+let closeBtnParent = closeBtn.parentNode;
 
-    // allow notifications to be opened and closed with enter key
-    $('.notificationBtn').keyup(function(event){
-        if(event.keyCode == 13){
-            $('.notificationBtn').click();
-        }
-    });
+//sidebar nav
+const sideBar = document.getElementById('sideBar');
+const menuBtn = document.getElementById('menuBtn');
+
+//remove parent element of closebtn clicked
+$('.closebtn').on('click', function() {
+    this.parentElement.remove();
+
+    //if notification list is empty hide the red indicator
+    if($('.notification').length === 0) {
+        $('.alert-indicator').removeClass('show');
+    }
+
+    if($('.notification').length > 0) {
+        $('.alert-indicator').addClass('show');
+    }
 });
 
-//toggle visibility of the notifications dropdown
-function notificationsToggle() {
-    document.getElementById("notificationsDropdown").classList.toggle("show");
+//toggle the notifications and sidebar navigation
+headerNav.addEventListener('click', toggleVisibility, false);
+
+function toggleVisibility(e) {
+    if (e.target === notificationBtn) {
+        notificationsDropdown.classList.toggle('show');
+    }
+    if (e.target == menuBtn) {
+        sideBar.classList.toggle('sidebar-hidden');
+    }
 }
 
 // Close the notification dropdown menu if clicked outside
@@ -32,4 +53,4 @@ window.onclick = (event) => {
       }
     }
   }
-}
+};

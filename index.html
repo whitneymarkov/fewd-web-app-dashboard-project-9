@@ -64,27 +64,27 @@
             <img class="rounded small-size space-right" src="img/user-img.jpg" alt="">
             <div class="dropdown space-right">
                 <div class="alert-indicator show"></div>
-                <svg class="small-size icon-bell notificationBtn" tabindex="1" style="display: block" onclick="notificationsToggle()">
+                <svg class="small-size icon-bell notificationBtn" id="notificationBtn" style="display: block" tabindex="1">
                     <use xlink:href="#icon-bell"></use>
                 </svg>
 
                 <div id="notificationsDropdown" class="notification-content">
                     <div class="notification">
-                        <input type="button" class="closebtn" onclick="this.parentElement.style.display='none';" value="&times;" tabindex="7">
+                        <input type="button" class="closebtn" value="&times;">
                         <span>You have <strong>5</strong> new followers</span>
                     </div>
                     <div class="notification">
-                        <input type="button" class="closebtn" onclick="this.parentElement.style.display='none';" value="&times;">
+                        <input type="button" class="closebtn" value="&times;">
                         <span><strong>10</strong> people liked your post</span>
                     </div>
                     <div class="notification">
-                        <input type="button" class="closebtn" onclick="this.parentElement.style.display='none';" value="&times;">
+                        <input type="button" class="closebtn" value="&times;">
                         <span><strong>3</strong> people shared your post</span>
                     </div>
                 </div>
 
             </div>
-            <svg class="small-size space-right button">
+            <svg class="small-size space-right button" id="menuBtn">
                 <use xlink:href="#icon-menu"></use>
             </svg>
         </div>
@@ -95,33 +95,33 @@
     <!--- Wrapper starts -->
     <div class="wrapper">
         <!-- Sidebar navigation starts -->
-        <div class="main-nav-sidebar sidebar-hidden">
+        <div class="main-nav-sidebar sidebar-hidden" id="sideBar">
             <nav>
                 <ul class="navigation">
                     <li class=" button active">
                         <a href="#">
-                            <svg class="small-size" tabindex="2">
+                            <svg class="small-size">
                                 <use xlink:href="#icon-dashboard"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="button">
                         <a href="#">
-                            <svg class="small-size" tabindex="3">
+                            <svg class="small-size">
                                 <use xlink:href="#icon-members"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="button">
                         <a href="#">
-                            <svg class="small-size" tabindex="4">
+                            <svg class="small-size">
                                 <use xlink:href="#icon-visits"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="button">
                         <a href="#">
-                            <svg class="small-size" tabindex="5">
+                            <svg class="small-size">
                                 <use xlink:href="#icon-settings"></use>
                             </svg>
                         </a>
@@ -134,9 +134,11 @@
         <!-- Main content starts -->
         <main class="content">
             <div class="alert">
-                <input type="button" class="closebtn" onclick="this.parentElement.style.display='none';" tabindex="6" value="&times;">
+                <input type="button" class="closebtn" value="&times;">
                 <span><strong>Alert</strong> Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</span>
             </div>
+
+
 
 
 
