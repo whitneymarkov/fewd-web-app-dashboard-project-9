@@ -59,7 +59,7 @@ body {
 .main-nav-sidebar {
   z-index: 1000;
   background-color: #fff;
-  width: 4em;
+  width: 4rem;
   height: 100%;
   box-shadow: 0 3px 6px rgba(41, 46, 47, 0.1), 0 3px 6px rgba(41, 46, 47, 0.1);
   transform: translate3d(0px, 0px, 0px);
@@ -84,7 +84,7 @@ body {
     display: block; }
 
 .sidebar-hidden {
-  transform: translate3d(-4em, 0px, 0px); }
+  transform: translate3d(-4rem, 0px, 0px); }
   @media (min-width: 1024px) {
     .sidebar-hidden {
       transform: translate3d(0px, 0px, 0px); } }
@@ -252,10 +252,10 @@ svg {
         font-size: 1rem;
         line-height: 1.5;
         font-family: "Rubik", sans-serif;
-        font-size: .9em;
-        padding: .4em 1.1em;
-        margin-left: .5em;
-        margin-right: .5em;
+        font-size: .7em;
+        padding: .3em 1.1em;
+        margin-left: .2em;
+        margin-right: .2em;
         cursor: pointer;
         transition: all 0.5s ease-out;
         border: 1px solid rgba(248, 248, 248, 0.5);
@@ -265,6 +265,12 @@ svg {
         .traffic-labels ul li a.active {
           border: 1px solid #f8f8f8;
           color: #f8f8f8; }
+        @media (min-width: 420px) {
+          .traffic-labels ul li a {
+            font-size: .9em;
+            padding: .4em 1.1em;
+            margin-left: .5em;
+            margin-right: .5em; } }
 
 .traffic-chart {
   height: 150px; }
@@ -318,8 +324,9 @@ body {
 
 .content {
   margin-top: 1em;
-  transform: translate3d(-32px, 0px, 0px);
-  width: 100%;
+  transform: translate3d(-2rem, 0px, 0px);
+  width: 100vw;
+  width: 95%;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto; }

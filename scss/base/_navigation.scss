@@ -43,7 +43,7 @@
 .main-nav-sidebar {
     z-index: 1000;
     background-color: $white;
-    width: 4em;
+    width: 4rem;
     height: 100%;
     box-shadow: 0 3px 6px rgba($color-dark,0.1), 0 3px 6px rgba($color-dark,0.1);
     transform: translate3d(0px, 0px, 0px);
@@ -75,7 +75,7 @@
 }
 
 .sidebar-hidden {
-    transform: translate3d(-4em, 0px, 0px);
+    transform: translate3d(-4rem, 0px, 0px);
     @media ($brk-desktop) {
         transform: translate3d(0px, 0px, 0px);
     }
