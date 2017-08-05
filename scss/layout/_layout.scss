@@ -60,3 +60,15 @@ body {
         transform: translate3d(0px, 0px, 0px);
     }
 }
+
+//charts
+.traffic-labels {
+    @include flex($dir: column);
+    align-items: center;
+    @media ($brk-tablet) {
+        @include flex($just: space-between, $dir: row);
+    }
+    ul {
+        @include flex($just: space-between);
+    }
+}

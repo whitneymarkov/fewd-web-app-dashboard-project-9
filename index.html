@@ -98,7 +98,7 @@
         <div class="main-nav-sidebar sidebar-hidden" id="sideBar">
             <nav>
                 <ul class="navigation">
-                    <li class=" button active">
+                    <li class=" button current">
                         <a href="#">
                             <svg class="small-size">
                                 <use xlink:href="#icon-dashboard"></use>
@@ -138,6 +138,27 @@
                 <span><strong>Alert</strong> Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</span>
             </div>
 
+            <!-- Web Traffic Chart starts-->
+            <div class="container dark-bg">
+                <div class="traffic-labels">
+                    <h2>Traffic</h2>
+                    <ul>
+                        <li><a href="#" class="chartBtn" id="hourlyBtn">Hourly</a></li>
+                        <li><a href="#" class="chartBtn" id="dailyBtn">Daily</a></li>
+                        <li><a href="#" class="chartBtn active" id="weeklyBtn">Weekly</a></li>
+                        <li><a href="#" class="chartBtn" id="monthlyBtn">Monthly</a></li>
+                    </ul>
+                </div>
+                <div class="traffic-chart">
+                    <canvas class="trafficChart" id="webTrafficHourly"></canvas>
+                    <canvas class="trafficChart" id="webTrafficDaily"></canvas>
+                    <canvas class="trafficChart currentChart" id="webTrafficWeekly"></canvas>
+                    <canvas class="trafficChart" id="webTrafficMonthly"></canvas>
+                </div>
+            </div>
+            <!-- Web Traffic Chart ends -->
+
+
 
 
 
@@ -152,6 +173,8 @@
 
     </footer>
     <script style="text/javaScript" src="js/main.js"></script>
+    <script style="text/javaScript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script style="text/javaScript" src="js/chart.js"></script>
 </body>
 
 </html>

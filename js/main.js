@@ -10,13 +10,12 @@ const notifications = document.getElementsByClassName('notification-content');
 
 //close buttons
 const closeBtn = document.getElementsByClassName('closebtn');
-let closeBtnParent = closeBtn.parentNode;
 
 //sidebar nav
 const sideBar = document.getElementById('sideBar');
 const menuBtn = document.getElementById('menuBtn');
 
-//remove parent element of closebtn clicked
+//remove parent element of closebtn clicked (x)
 $('.closebtn').on('click', function() {
     this.parentElement.remove();
 

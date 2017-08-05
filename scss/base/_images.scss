@@ -30,7 +30,7 @@ svg {
     }
 }
 
-.main-nav-sidebar .active svg {
+.main-nav-sidebar .current svg {
     @media ($brk-desktop) {
         fill: $color-dark;
     }
