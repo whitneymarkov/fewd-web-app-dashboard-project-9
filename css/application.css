@@ -265,7 +265,7 @@ svg {
         .traffic-labels ul li a.active {
           border: 1px solid #f8f8f8;
           color: #f8f8f8; }
-        @media (min-width: 420px) {
+        @media (min-width: 768px) {
           .traffic-labels ul li a {
             font-size: .9em;
             padding: .4em 1.1em;
