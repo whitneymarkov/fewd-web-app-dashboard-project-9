@@ -53,10 +53,12 @@ body {
 }
 
 .content {
-    margin-top: 1em;
-    margin-left: 0px;
-    padding: .5em;
+    height: 100%;
+    padding: .5em .5em;
     @include center(100%);
+    @media ($brk-desktop) {
+        padding: 1.5em .5em;
+    }
 }
 
 //charts
@@ -69,4 +71,22 @@ body {
     ul {
         @include flex($just: space-between);
     }
+}
+
+.secondary-charts {
+    @include flex($dir: column);
+    @media ($brk-tablet) {
+        @include flex($dir: row, $just: space-between);
+        .daily-traffic-chart,
+        .mobile-users-chart {
+            width: 49.5%;
+        }
+    }
+    @media ($brk-desktop) {
+        .daily-traffic-chart,
+        .mobile-users-chart {
+            width: 48.5%;
+        }
+    }
+
 }

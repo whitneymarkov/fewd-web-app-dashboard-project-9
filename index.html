@@ -64,7 +64,7 @@
             <img class="rounded small-size space-right" src="img/user-img.jpg" alt="">
             <div class="dropdown space-right">
                 <div class="alert-indicator show"></div>
-                <svg class="small-size icon-bell notificationBtn" id="notificationBtn" style="display: block" tabindex="1">
+                <svg class="small-size icon-bell notificationBtn button" id="notificationBtn" style="display: block" tabindex="1">
                     <use xlink:href="#icon-bell"></use>
                 </svg>
 
@@ -157,6 +157,23 @@
                 </div>
             </div>
             <!-- Web Traffic Chart ends -->
+            <!-- Secondary charts start -->
+            <div class="secondary-charts">
+                <div class="daily-traffic-chart">
+                    <h2>Daily Traffic</h2>
+                    <div class="small-chart">
+                        <canvas id="dailyTrafficChart"></canvas>
+                    </div>
+                </div>
+                <div class="mobile-users-chart">
+                    <h2>Mobile Users</h2>
+                    <div class="small-chart">
+                        <canvas id="mobileUsersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Secondary charts end -->
+
 
 
 

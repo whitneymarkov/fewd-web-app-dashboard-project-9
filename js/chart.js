@@ -13,6 +13,7 @@ let globalOptions = {
     },
     scales: {
         xAxes: [{
+            barPercentage: 0.5,
             ticks: {
                 display: true,
                 fontSize: 9
@@ -181,3 +182,64 @@ for (let i = 0; i < chartBtn.length; i++) {
         trafficChart[this.index].style.display = 'block';
     });
 }
+
+//secondary charts
+const smallDailyChart = document.getElementById('dailyTrafficChart').getContext('2d');
+const dailyChart = new Chart(smallDailyChart, {
+    type: 'bar',
+    data: {
+       labels: [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13' ],
+       datasets: [{
+           label: '# of visits',
+           data: [ 640, 865, 320, 430, 320, 470, 240, 464, 360, 580, 830, 490, 568, 800 ],
+           backgroundColor: 'rgba(84, 149, 148, 1)',
+        }]
+    },
+    options: globalOptions,
+});
+
+const mobileUsersChart = document.getElementById('mobileUsersChart').getContext('2d');
+const usersCharts = new Chart(mobileUsersChart, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [70, 20, 10],
+             backgroundColor: ['rgba(41, 46, 47, 1)', 'rgba(85, 93, 90, 1)', 'rgba(227, 105, 92, 1)' ],
+             hoverBackgroundColor: ['rgba(41, 46, 47, .9)', 'rgba(85, 93, 90, .9)', 'rgba(227, 105, 92, .9)' ]
+
+        }],
+        labels: [
+            'Phones',
+            'Tablets',
+            'Desktop'
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+            display: true,
+            position: 'bottom'
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    display: false,
+                },
+                gridLines: {
+                    display: false,
+                    drawBorder: false
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                    display: false,
+                },
+                gridLines: {
+                    display: false,
+                    drawBorder: false
+                }
+            }]
+        }
+    },
+});

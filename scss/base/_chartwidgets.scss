@@ -2,20 +2,32 @@
 //  Imports chart widgets
 // ======================================
 
-//
+//main traffic chart
 .container {
     padding: .9em;
+    margin-bottom: $margin-small;
+    @media ($brk-desktop) {
+        margin-bottom: $margin-large;
+    }
 }
 
 .dark-bg {
-    background-color: $color-dark;
+    background-color: $white;
     border-radius: $br;
+    box-shadow: $shadow;
+    @media ($brk-desktop) {
+        background-color: $color-dark;
+    }
 }
 
 .traffic-labels {
-    @include text($color: $color-light);
+    @include text($color: $color-dark);
     font-size: .9em;
     margin-bottom: 1em;
+    @media ($brk-desktop) {
+        color: $color-light;
+    }
+
     h2 {
         font-size: 1.3em;
         font-weight: 400;
@@ -37,14 +49,14 @@
                 transform: translateY(-2px);
             }
             a {
-                @include text($color: rgba($color-light, .5));
+                @include text($color: rgba($color-dark, .5));
                 font-size: .7em;
                 padding: .3em 1.1em;
                 margin-left: .2em;
                 margin-right: .2em;
                 cursor: pointer;
                 transition: all 0.5s ease-out;
-                border: 1px solid rgba($color-light, .5);
+                border: 1px solid rgba($color-dark, .5);
                 border-radius: 1.2em;
                 &:hover,
                 &:link,
@@ -52,8 +64,8 @@
                     text-decoration: none;
                 }
                 &.active {
-                    border: 1px solid $color-light;
-                    color: $color-light;
+                    border: 1px solid $color-dark;
+                    color: $color-dark;
                 }
                 @media ($brk-mobile-wide) {
                     font-size: .8em;
@@ -67,6 +79,14 @@
                     margin-left: .5em;
                     margin-right: .5em;
                 }
+                @media ($brk-desktop) {
+                    color: rgba($color-light, .5);
+                    border: 1px solid rgba($color-light, .5);
+                    &.active {
+                        border: 1px solid $color-light;
+                        color: $color-light;
+                    }
+                }
             }
 
         }
@@ -76,4 +96,36 @@
 .traffic-chart {
     height: 150px;
     min-width: 240px;
+}
+
+//secondary charts
+
+.small-chart {
+    height: 150px;
+    @media ($brk-tablet) {
+        height: 250px;
+    }
+}
+
+.daily-traffic-chart,
+.mobile-users-chart {
+    color: $color-dark;
+    text-align: center;
+    background-color: $white;
+    border-radius: $br;
+    box-shadow: $shadow;
+    padding: .9em;
+    margin-bottom: $margin-small;
+    @media ($brk-tablet) {
+        text-align: left;
+    }
+    @media ($brk-desktop) {
+        margin-bottom: $margin-large;
+    }
+    h2 {
+        font-size: 1.1em;
+        font-weight: 400;
+        margin: 0;
+        padding: 0 0 .9em 0;
+    }
 }

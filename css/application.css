@@ -22,12 +22,13 @@ body {
 
 .header-nav {
   background-color: #292e2f;
-  height: 4em;
+  height: 3.5em;
   padding-left: 1.5em;
   padding-right: 1.5em; }
   @media (min-width: 1024px) {
     .header-nav {
-      background-color: #fff; } }
+      background-color: #fff;
+      height: 4em; } }
   .header-nav h1 {
     color: #f8f8f8;
     font-size: 1.5em;
@@ -132,11 +133,14 @@ svg {
   background-color: #549594;
   color: #f8f8f8;
   border-radius: 4px;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center; }
+  @media (min-width: 1024px) {
+    .alert {
+      margin-bottom: 1.5em; } }
 
 /* The close button */
 .closebtn {
@@ -216,19 +220,30 @@ svg {
   opacity: 1; }
 
 .container {
-  padding: .9em; }
+  padding: .9em;
+  margin-bottom: 0.5em; }
+  @media (min-width: 1024px) {
+    .container {
+      margin-bottom: 1.5em; } }
 
 .dark-bg {
-  background-color: #292e2f;
-  border-radius: 4px; }
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  @media (min-width: 1024px) {
+    .dark-bg {
+      background-color: #292e2f; } }
 
 .traffic-labels {
-  color: #f8f8f8;
+  color: #292e2f;
   font-size: 1rem;
   line-height: 1.5;
   font-family: "Rubik", sans-serif;
   font-size: .9em;
   margin-bottom: 1em; }
+  @media (min-width: 1024px) {
+    .traffic-labels {
+      color: #f8f8f8; } }
   .traffic-labels h2 {
     font-size: 1.3em;
     font-weight: 400;
@@ -247,7 +262,7 @@ svg {
       .traffic-labels ul li:hover {
         transform: translateY(-2px); }
       .traffic-labels ul li a {
-        color: rgba(248, 248, 248, 0.5);
+        color: rgba(41, 46, 47, 0.5);
         font-size: 1rem;
         line-height: 1.5;
         font-family: "Rubik", sans-serif;
@@ -257,13 +272,13 @@ svg {
         margin-right: .2em;
         cursor: pointer;
         transition: all 0.5s ease-out;
-        border: 1px solid rgba(248, 248, 248, 0.5);
+        border: 1px solid rgba(41, 46, 47, 0.5);
         border-radius: 1.2em; }
         .traffic-labels ul li a:hover, .traffic-labels ul li a:link, .traffic-labels ul li a:visited {
           text-decoration: none; }
         .traffic-labels ul li a.active {
-          border: 1px solid #f8f8f8;
-          color: #f8f8f8; }
+          border: 1px solid #292e2f;
+          color: #292e2f; }
         @media (min-width: 340px) {
           .traffic-labels ul li a {
             font-size: .8em;
@@ -276,10 +291,47 @@ svg {
             padding: .4em 1.1em;
             margin-left: .5em;
             margin-right: .5em; } }
+        @media (min-width: 1024px) {
+          .traffic-labels ul li a {
+            color: rgba(248, 248, 248, 0.5);
+            border: 1px solid rgba(248, 248, 248, 0.5); }
+            .traffic-labels ul li a.active {
+              border: 1px solid #f8f8f8;
+              color: #f8f8f8; } }
 
 .traffic-chart {
   height: 150px;
   min-width: 240px; }
+
+.small-chart {
+  height: 150px; }
+  @media (min-width: 768px) {
+    .small-chart {
+      height: 250px; } }
+
+.daily-traffic-chart,
+.mobile-users-chart {
+  color: #292e2f;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: .9em;
+  margin-bottom: 0.5em; }
+  @media (min-width: 768px) {
+    .daily-traffic-chart,
+    .mobile-users-chart {
+      text-align: left; } }
+  @media (min-width: 1024px) {
+    .daily-traffic-chart,
+    .mobile-users-chart {
+      margin-bottom: 1.5em; } }
+  .daily-traffic-chart h2,
+  .mobile-users-chart h2 {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 .9em 0; }
 
 html,
 body {
@@ -329,13 +381,15 @@ body {
     text-align: center; }
 
 .content {
-  margin-top: 1em;
-  margin-left: 0px;
-  padding: .5em;
+  height: 100%;
+  padding: .5em .5em;
   width: 100%;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto; }
+  @media (min-width: 1024px) {
+    .content {
+      padding: 1.5em .5em; } }
 
 .traffic-labels {
   display: flex;
@@ -349,5 +403,21 @@ body {
   .traffic-labels ul {
     display: flex;
     justify-content: space-between; }
+
+.secondary-charts {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .secondary-charts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .secondary-charts .daily-traffic-chart,
+      .secondary-charts .mobile-users-chart {
+        width: 49.5%; } }
+  @media (min-width: 1024px) {
+    .secondary-charts .daily-traffic-chart,
+    .secondary-charts .mobile-users-chart {
+      width: 48.5%; } }
 
 /*# sourceMappingURL=application.css.map */
