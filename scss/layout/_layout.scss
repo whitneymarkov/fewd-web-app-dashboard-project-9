@@ -54,12 +54,9 @@ body {
 
 .content {
     margin-top: 1em;
-    transform: translate3d(-2rem, 0px, 0px);
-    width: 100vw;
-    @include center(95%);
-    @media ($brk-desktop) {
-        transform: translate3d(0px, 0px, 0px);
-    }
+    margin-left: 0px;
+    padding: .5em;
+    @include center(100%);
 }
 
 //charts

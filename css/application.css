@@ -59,11 +59,10 @@ body {
 .main-nav-sidebar {
   z-index: 1000;
   background-color: #fff;
-  width: 4rem;
+  width: 60px;
   height: 100%;
   box-shadow: 0 3px 6px rgba(41, 46, 47, 0.1), 0 3px 6px rgba(41, 46, 47, 0.1);
-  transform: translate3d(0px, 0px, 0px);
-  transition: transform .3s; }
+  transition: margin .3s; }
   @media (min-width: 1024px) {
     .main-nav-sidebar {
       background-color: #292e2f; } }
@@ -84,10 +83,10 @@ body {
     display: block; }
 
 .sidebar-hidden {
-  transform: translate3d(-4rem, 0px, 0px); }
+  margin-left: -60px; }
   @media (min-width: 1024px) {
     .sidebar-hidden {
-      transform: translate3d(0px, 0px, 0px); } }
+      margin-left: 0; } }
 
 img {
   width: 100%; }
@@ -265,6 +264,12 @@ svg {
         .traffic-labels ul li a.active {
           border: 1px solid #f8f8f8;
           color: #f8f8f8; }
+        @media (min-width: 340px) {
+          .traffic-labels ul li a {
+            font-size: .8em;
+            padding: .4em 1.1em;
+            margin-left: .5em;
+            margin-right: .5em; } }
         @media (min-width: 768px) {
           .traffic-labels ul li a {
             font-size: .9em;
@@ -273,7 +278,8 @@ svg {
             margin-right: .5em; } }
 
 .traffic-chart {
-  height: 150px; }
+  height: 150px;
+  min-width: 240px; }
 
 html,
 body {
@@ -324,15 +330,12 @@ body {
 
 .content {
   margin-top: 1em;
-  transform: translate3d(-2rem, 0px, 0px);
-  width: 100vw;
-  width: 95%;
+  margin-left: 0px;
+  padding: .5em;
+  width: 100%;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto; }
-  @media (min-width: 1024px) {
-    .content {
-      transform: translate3d(0px, 0px, 0px); } }
 
 .traffic-labels {
   display: flex;

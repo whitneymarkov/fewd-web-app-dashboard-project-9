@@ -55,6 +55,12 @@
                     border: 1px solid $color-light;
                     color: $color-light;
                 }
+                @media ($brk-mobile-wide) {
+                    font-size: .8em;
+                    padding: .4em 1.1em;
+                    margin-left: .5em;
+                    margin-right: .5em;
+                }
                 @media ($brk-tablet) {
                     font-size: .9em;
                     padding: .4em 1.1em;
@@ -69,4 +75,5 @@
 
 .traffic-chart {
     height: 150px;
+    min-width: 240px;
 }
