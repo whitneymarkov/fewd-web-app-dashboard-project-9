@@ -228,8 +228,7 @@ svg {
 
 .dark-bg {
   background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  border-radius: 4px; }
   @media (min-width: 1024px) {
     .dark-bg {
       background-color: #292e2f; } }
@@ -315,7 +314,6 @@ svg {
   text-align: center;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: .9em;
   margin-bottom: 0.5em; }
   @media (min-width: 768px) {
@@ -325,7 +323,8 @@ svg {
   @media (min-width: 1024px) {
     .daily-traffic-chart,
     .mobile-users-chart {
-      margin-bottom: 1.5em; } }
+      margin-bottom: 1.5em;
+      border-bottom: 3px solid rgba(85, 93, 90, 0.2); } }
   .daily-traffic-chart h2,
   .mobile-users-chart h2 {
     font-size: 1.1em;
@@ -368,6 +367,7 @@ body {
 
 .wrapper {
   height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: row; }
 

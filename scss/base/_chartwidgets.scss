@@ -14,7 +14,6 @@
 .dark-bg {
     background-color: $white;
     border-radius: $br;
-    box-shadow: $shadow;
     @media ($brk-desktop) {
         background-color: $color-dark;
     }
@@ -113,7 +112,6 @@
     text-align: center;
     background-color: $white;
     border-radius: $br;
-    box-shadow: $shadow;
     padding: .9em;
     margin-bottom: $margin-small;
     @media ($brk-tablet) {
@@ -121,6 +119,7 @@
     }
     @media ($brk-desktop) {
         margin-bottom: $margin-large;
+        border-bottom: 3px solid rgba($color-medium, .2);
     }
     h2 {
         font-size: 1.1em;

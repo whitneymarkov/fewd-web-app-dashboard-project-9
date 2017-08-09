@@ -50,7 +50,7 @@ const hourlyTraffic = new Chart(webTrafficHourly, {
             pointHoverBorderColor: 'rgba(227, 105, 92, 1)',
             pointHoverBackgroundColor: 'rgba(227, 105, 92, 1)',
             pointHoverRadius: 5,
-            data: [ 640, 865, 320, 430, 320, 470, 240, 464, 360, 580, 830, 490, 568, 800 ],
+            data: [ 640, 865, 742, 430, 320, 630, 240, 464, 360, 580, 830, 490, 568, 800 ],
         },
         {
             label: 'Avg visit duration',

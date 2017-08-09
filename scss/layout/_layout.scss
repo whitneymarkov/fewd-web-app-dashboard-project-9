@@ -41,6 +41,7 @@ body {
 
 .wrapper {
     height: 100%;
+    overflow: hidden;
     @include flex($dir: row);
 }
 
