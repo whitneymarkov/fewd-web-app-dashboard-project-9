@@ -8,6 +8,11 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 300; }
 
+html,
+body {
+  height: 100%;
+  overflow-x: hidden; }
+
 .wrapper {
   background-color: #f8f8f8; }
 
@@ -367,7 +372,6 @@ body {
 
 .wrapper {
   height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: row; }
 

@@ -12,6 +12,12 @@ body {
     font-weight: 300;
 }
 
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
 .wrapper {
     background-color: $color-light;
 }
