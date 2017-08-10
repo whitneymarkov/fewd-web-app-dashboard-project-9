@@ -44,8 +44,6 @@
 .main-nav-sidebar {
     background-color: $white;
     width: 60px;
-    min-height: 100%;
-    box-shadow: 0 3px 6px rgba($color-dark,0.1), 0 3px 6px rgba($color-dark,0.1);
     transition: margin .3s;
     @media ($brk-desktop) {
         background-color: $color-dark;
@@ -62,7 +60,7 @@
                 border-left: 4px solid $color-accent-red;
             }
             &.current {
-                background-color: $color-light-medium;
+                background-color: $color-light;
                 border-left: 4px solid $color-accent-red;
             }
         }

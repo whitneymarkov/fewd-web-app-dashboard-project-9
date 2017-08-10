@@ -7,20 +7,17 @@
   //border: 1px solid lime;
 }
 
-body {
-    @include text($color: $color-light);
-    font-weight: 300;
-}
-
 html,
 body {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-    min-height: 100%;
+    height: 100%;
 }
 
-.wrapper {
+body {
+    @include text($color: $color-light);
+    font-weight: 300;
     background-color: $color-light;
 }
 
