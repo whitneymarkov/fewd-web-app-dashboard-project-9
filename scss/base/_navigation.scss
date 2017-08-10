@@ -42,7 +42,7 @@
 // -----------------Main Nav------------------//
 
 .main-nav-sidebar {
-    background-color: $white;
+    background-color: $color-medium;
     width: 60px;
     transition: margin .3s;
     @media ($brk-desktop) {
@@ -60,8 +60,11 @@
                 border-left: 4px solid $color-accent-red;
             }
             &.current {
-                background-color: $color-light;
+                background-color: $color-medium;
                 border-left: 4px solid $color-accent-red;
+                @media ($brk-desktop) {
+                    background-color: $color-light;
+                }
             }
         }
     }

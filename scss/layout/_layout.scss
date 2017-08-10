@@ -79,3 +79,19 @@
     }
 
 }
+
+//social stats widgets
+
+.social-stats {
+    @include flex($dir: column, $just: space-around);
+    @media ($brk-tablet) {
+        @include flex($dir: row);
+    }
+    .social-widget {
+        @include flex($dir: row, $just: flex-start);
+        align-items: center;
+        @media ($brk-tablet) {
+            width: 30%;
+        }
+    }
+}

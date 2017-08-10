@@ -24,7 +24,7 @@ svg {
 }
 
 .main-nav-sidebar svg {
-    fill: $color-dark;
+    fill: $color-light;
     @media ($brk-desktop) {
         fill: $color-light;
     }
@@ -49,4 +49,9 @@ svg {
 .small-size {
     width: 1.5rem;
     height: 1.5rem;
+}
+
+.medium-size {
+    width: 3rem;
+    height: 3rem;
 }

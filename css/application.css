@@ -16,6 +16,19 @@ body {
   font-weight: 300;
   background-color: #f8f8f8; }
 
+.content {
+  color: #292e2f;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Rubik", sans-serif; }
+
+.container {
+  padding: .9em;
+  margin-bottom: 0.5em; }
+  @media (min-width: 1024px) {
+    .container {
+      margin-bottom: 1.5em; } }
+
 .space-right {
   margin-right: 1.5em; }
 
@@ -63,7 +76,7 @@ body {
   cursor: pointer; }
 
 .main-nav-sidebar {
-  background-color: #fff;
+  background-color: #555d5a;
   width: 60px;
   transition: margin .3s; }
   @media (min-width: 1024px) {
@@ -80,8 +93,11 @@ body {
       .main-nav-sidebar ul li:hover {
         border-left: 4px solid #e3695c; }
       .main-nav-sidebar ul li.current {
-        background-color: #f8f8f8;
+        background-color: #555d5a;
         border-left: 4px solid #e3695c; }
+        @media (min-width: 1024px) {
+          .main-nav-sidebar ul li.current {
+            background-color: #f8f8f8; } }
   .main-nav-sidebar ul li a {
     display: block; }
 
@@ -108,7 +124,7 @@ svg {
       fill: #292e2f; } }
 
 .main-nav-sidebar svg {
-  fill: #292e2f; }
+  fill: #f8f8f8; }
   @media (min-width: 1024px) {
     .main-nav-sidebar svg {
       fill: #f8f8f8; } }
@@ -128,6 +144,10 @@ svg {
 .small-size {
   width: 1.5rem;
   height: 1.5rem; }
+
+.medium-size {
+  width: 3rem;
+  height: 3rem; }
 
 /* -------------------------The alert message box---------------------------- */
 .alert {
@@ -221,28 +241,17 @@ svg {
   visibility: visible;
   opacity: 1; }
 
-.container {
-  padding: .9em;
-  margin-bottom: 0.5em; }
-  @media (min-width: 1024px) {
-    .container {
-      margin-bottom: 1.5em; } }
-
 .dark-bg {
   background-color: #fff;
   border-radius: 4px; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .dark-bg {
       background-color: #292e2f; } }
 
 .traffic-labels {
-  color: #292e2f;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-family: "Rubik", sans-serif;
   font-size: .9em;
   margin-bottom: 1em; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .traffic-labels {
       color: #f8f8f8; } }
   .traffic-labels h2 {
@@ -291,9 +300,7 @@ svg {
             font-size: .9em;
             padding: .4em 1.1em;
             margin-left: .5em;
-            margin-right: .5em; } }
-        @media (min-width: 1024px) {
-          .traffic-labels ul li a {
+            margin-right: .5em;
             color: rgba(248, 248, 248, 0.5);
             border: 1px solid rgba(248, 248, 248, 0.5); }
             .traffic-labels ul li a.active {
@@ -312,7 +319,6 @@ svg {
 
 .daily-traffic-chart,
 .mobile-users-chart {
-  color: #292e2f;
   text-align: center;
   background-color: #fff;
   border-radius: 4px;
@@ -333,6 +339,46 @@ svg {
     font-weight: 400;
     margin: 0;
     padding: 0 0 .9em 0; }
+
+.social {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px; }
+  @media (min-width: 768px) {
+    .social {
+      text-align: left; } }
+  @media (min-width: 1024px) {
+    .social {
+      border-bottom: 3px solid rgba(85, 93, 90, 0.2); } }
+  .social h2 {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 .9em 0; }
+  .social .social-widget {
+    border: 1px solid rgba(85, 93, 90, 0.1);
+    border-radius: 4px;
+    padding: .5em 1em; }
+    .social .social-widget .social-icon {
+      padding: .3em;
+      background-color: rgba(85, 93, 90, 0.1);
+      border-radius: 50%; }
+      .social .social-widget .social-icon.twitter svg {
+        fill: #00b6f1; }
+      .social .social-widget .social-icon.facebook svg {
+        fill: #3b5998; }
+      .social .social-widget .social-icon.googleplus svg {
+        fill: #df4a32; }
+    .social .social-widget .social-platform {
+      margin-left: 1em; }
+      .social .social-widget .social-platform h3 {
+        font-size: 1em;
+        font-weight: 400;
+        margin: 0;
+        padding: 0; }
+      .social .social-widget .social-platform span {
+        font-size: 1.5em;
+        font-weight: 400; }
 
 .header-nav {
   display: flex;
@@ -410,5 +456,22 @@ svg {
     .secondary-charts .daily-traffic-chart,
     .secondary-charts .mobile-users-chart {
       width: 48.5%; } }
+
+.social-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  @media (min-width: 768px) {
+    .social-stats {
+      display: flex;
+      flex-direction: row; } }
+  .social-stats .social-widget {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .social-stats .social-widget {
+        width: 30%; } }
 
 /*# sourceMappingURL=application.css.map */

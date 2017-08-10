@@ -21,6 +21,18 @@ body {
     background-color: $color-light;
 }
 
+.content {
+    @include text($color: $color-dark);
+}
+
+.container {
+    padding: .9em;
+    margin-bottom: $margin-small;
+    @media ($brk-desktop) {
+        margin-bottom: $margin-large;
+    }
+}
+
 // -----------------DRY Selectors------------------//
 
 .space-right {

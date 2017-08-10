@@ -3,27 +3,18 @@
 // ======================================
 
 //main traffic chart
-.container {
-    padding: .9em;
-    margin-bottom: $margin-small;
-    @media ($brk-desktop) {
-        margin-bottom: $margin-large;
-    }
-}
-
 .dark-bg {
     background-color: $white;
     border-radius: $br;
-    @media ($brk-desktop) {
+    @media ($brk-tablet) {
         background-color: $color-dark;
     }
 }
 
 .traffic-labels {
-    @include text($color: $color-dark);
     font-size: .9em;
     margin-bottom: 1em;
-    @media ($brk-desktop) {
+    @media ($brk-tablet) {
         color: $color-light;
     }
 
@@ -77,8 +68,6 @@
                     padding: .4em 1.1em;
                     margin-left: .5em;
                     margin-right: .5em;
-                }
-                @media ($brk-desktop) {
                     color: rgba($color-light, .5);
                     border: 1px solid rgba($color-light, .5);
                     &.active {
@@ -108,7 +97,6 @@
 
 .daily-traffic-chart,
 .mobile-users-chart {
-    color: $color-dark;
     text-align: center;
     background-color: $white;
     border-radius: $br;
@@ -119,7 +107,7 @@
     }
     @media ($brk-desktop) {
         margin-bottom: $margin-large;
-        border-bottom: 3px solid rgba($color-medium, .2);
+        border-bottom: $border;
     }
     h2 {
         font-size: 1.1em;
