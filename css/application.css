@@ -145,6 +145,10 @@ svg {
   width: 1.5rem;
   height: 1.5rem; }
 
+.preview-img-size {
+  width: 2.5rem;
+  height: 2.5rem; }
+
 .medium-size {
   width: 3rem;
   height: 3rem; }
@@ -380,6 +384,61 @@ svg {
         font-size: 1.5em;
         font-weight: 400; }
 
+.new-members {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px; }
+  @media (min-width: 768px) {
+    .new-members {
+      text-align: left; } }
+  @media (min-width: 1024px) {
+    .new-members {
+      border-bottom: 3px solid rgba(85, 93, 90, 0.2); } }
+  .new-members h2 {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 .9em 0; }
+  .new-members .member {
+    border-bottom: 1px solid rgba(85, 93, 90, 0.1);
+    padding: .7em 0;
+    text-align: left;
+    transition: transform .3s ease-in-out; }
+    .new-members .member:last-child {
+      border-bottom: none; }
+    .new-members .member:hover {
+      transform: translateY(-2px) scale(1.01); }
+    .new-members .member .member-info {
+      margin-left: 1em; }
+      .new-members .member .member-info h4 {
+        font-size: .9em;
+        font-weight: 500;
+        margin: 0;
+        padding: 0; }
+      .new-members .member .member-info span {
+        color: #549594;
+        font-size: .9em;
+        font-weight: 300; }
+    .new-members .member .date span {
+      font-size: .85em;
+      font-weight: 200; }
+    .new-members .member .member-activity {
+      margin-left: 1em; }
+      .new-members .member .member-activity h4 {
+        display: inline;
+        font-size: .9em;
+        font-weight: 500;
+        margin: 0;
+        padding: 0; }
+      .new-members .member .member-activity .activity {
+        font-size: .9em;
+        font-weight: 300; }
+      .new-members .member .member-activity .time {
+        color: #549594;
+        font-size: .85em;
+        font-weight: 300;
+        display: block; }
+
 .header-nav {
   display: flex;
   flex-direction: row-reverse;
@@ -473,5 +532,36 @@ svg {
     @media (min-width: 768px) {
       .social-stats .social-widget {
         width: 30%; } }
+
+.members-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media (min-width: 768px) {
+    .members-widget {
+      flex-direction: row; } }
+  .members-widget .new-members {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    @media (min-width: 768px) {
+      .members-widget .new-members {
+        width: 49.5%; } }
+    @media (min-width: 1024px) {
+      .members-widget .new-members {
+        width: 48.5%; } }
+    .members-widget .new-members .member {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .members-widget .new-members .member .member-info,
+      .members-widget .new-members .member .member-activity {
+        margin-right: auto; }
+      .members-widget .new-members .member .date {
+        display: none; }
+        @media (min-width: 768px) {
+          .members-widget .new-members .member .date {
+            display: block; } }
 
 /*# sourceMappingURL=application.css.map */

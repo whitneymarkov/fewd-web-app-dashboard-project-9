@@ -95,3 +95,35 @@
         }
     }
 }
+
+
+// Member widgets
+.members-widget {
+    @include flex($dir: column, $just: space-between);
+    @media ($brk-tablet) {
+        flex-direction: row;
+    }
+    .new-members {
+        @include flex($dir: column, $just: space-around);
+        @media ($brk-tablet) {
+            width: 49.5%;
+        }
+        @media ($brk-desktop) {
+            width: 48.5%;
+        }
+        .member {
+            @include flex($dir: row, $just: flex-start);
+            align-items: flex-start;
+            .member-info,
+            .member-activity {
+                margin-right: auto;
+            }
+            .date {
+                display: none;
+                @media ($brk-tablet) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

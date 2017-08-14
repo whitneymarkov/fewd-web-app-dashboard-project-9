@@ -219,7 +219,8 @@ const usersCharts = new Chart(mobileUsersChart, {
         maintainAspectRatio: false,
         legend: {
             display: true,
-            position: 'bottom'
+            position: 'right'
+
         },
         scales: {
             xAxes: [{

@@ -1,0 +1,74 @@
+// ======================================
+//  Members widgets styles
+// ======================================
+
+.new-members {
+    text-align: center;
+    background-color: $white;
+    border-radius: $br;
+    @media ($brk-tablet) {
+        text-align: left;
+    }
+    @media ($brk-desktop) {
+        border-bottom: $border;
+    }
+    h2 {
+        font-size: 1.1em;
+        font-weight: 400;
+        margin: 0;
+        padding: 0 0 .9em 0;
+    }
+    .member {
+        border-bottom: 1px solid rgba($color-medium, .1);
+        &:last-child {
+            border-bottom: none;
+        }
+        padding: .7em 0;
+        text-align: left;
+        transition: transform .3s ease-in-out;
+        &:hover {
+            transform: translateY(-2px) scale(1.01);
+        }
+        .member-info {
+            margin-left: 1em;
+            h4 {
+                font-size: .9em;
+                font-weight: 500;
+                margin: 0;
+                padding: 0;
+            }
+            span {
+                color: $color-accent-blue;
+                font-size: .9em;
+                font-weight: 300;
+            }
+        }
+        .date {
+            span {
+                font-size: .85em;
+                font-weight: 200;
+            }
+        }
+        //activity widget
+        .member-activity {
+            margin-left: 1em;
+            h4 {
+                display: inline;
+                font-size: .9em;
+                font-weight: 500;
+                margin: 0;
+                padding: 0;
+            }
+            .activity {
+                font-size: .9em;
+                font-weight: 300;
+            }
+            .time {
+                color: $color-accent-blue;
+                font-size: .85em;
+                font-weight: 300;
+                display: block;
+            }
+        }
+    }
+}
