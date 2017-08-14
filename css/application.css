@@ -76,12 +76,9 @@ body {
   cursor: pointer; }
 
 .main-nav-sidebar {
-  background-color: #555d5a;
+  background-color: #292e2f;
   width: 60px;
   transition: margin .3s; }
-  @media (min-width: 1024px) {
-    .main-nav-sidebar {
-      background-color: #292e2f; } }
   .main-nav-sidebar ul {
     padding: 0;
     margin: 0; }
@@ -93,7 +90,7 @@ body {
       .main-nav-sidebar ul li:hover {
         border-left: 4px solid #e3695c; }
       .main-nav-sidebar ul li.current {
-        background-color: #555d5a;
+        background-color: #292e2f;
         border-left: 4px solid #e3695c; }
         @media (min-width: 1024px) {
           .main-nav-sidebar ul li.current {
@@ -415,10 +412,11 @@ svg {
         font-weight: 500;
         margin: 0;
         padding: 0; }
-      .new-members .member .member-info span {
+      .new-members .member .member-info span a {
         color: #549594;
         font-size: .9em;
-        font-weight: 300; }
+        font-weight: 300;
+        text-decoration: none; }
     .new-members .member .date span {
       font-size: .85em;
       font-weight: 200; }
