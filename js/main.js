@@ -19,6 +19,10 @@ const menuBtn = document.getElementById('menuBtn');
 const searchField = $('.autocomplete > input');
 const memberSuggestions = $('.autocomplete > ul');
 
+//form validation elements
+const submit = document.querySelector('#submit');
+const messageForm = document.getElementById('messageForm')
+
 //remove parent element of closebtn clicked (x)
 $('.closebtn').on('click', function() {
     this.parentElement.remove();
@@ -84,4 +88,30 @@ searchField.keyup(function(){
 			memberSuggestions.empty();
 		});
 	}
+});
+
+$('#submit').on('click', function(e) {
+    e.preventDefault();
+
+    let userSearch = document.querySelector('#userSearch').value;
+    let messageField = document.querySelector('#message').value;
+
+    if (( userSearch.length > 0 ) && ( messageField.length > 0 )) {
+        swal({
+            title: '',
+            text: 'Your message has been sent!',
+            type: 'success',
+            confirmButtonColor: '#549594',
+        })
+            .catch(swal.noop)
+        messageForm.reset();
+    } else {
+            swal({
+                title: '',
+                text: 'You must complete both fields before sending a message',
+                type: 'warning',
+                confirmButtonColor: '#549594'
+            })
+            .catch(swal.noop)
+    }
 });

@@ -8,6 +8,7 @@
     <link rel="icon" type="image/ico" href="favicon.ico">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.8/sweetalert2.min.css">
     <link rel="stylesheet" href="css/application.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -320,15 +321,15 @@
 
             <div class="forms">
                 <div class="message-user container">
-                    <form action="index.html" method="post">
+                    <form action="index.html" method="post" id="messageForm">
                         <h2>Message User</h2>
                         <div class="memberList autocomplete">
-                            <input type="text" name="search" placeholder="Search for User" id="userSearch">
+                            <input type="text" name="search" placeholder="Search for User" id="userSearch" required>
                             <ul>
                             </ul>
                         </div>
-                        <textarea name="message" placeholder="Message for User" rows="6"></textarea>
-                        <button type="submit">Send</button>
+                        <textarea name="message" placeholder="Message for User" rows="6" id="message" required></textarea>
+                        <button type="submit" id="submit">Send</button>
                     </form>
                 </div>
                 <div class="settings container">
@@ -353,6 +354,7 @@
     <script style="text/javaScript" src="js/main.js"></script>
     <script style="text/javaScript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <script style="text/javaScript" src="js/chart.js"></script>
+    <script style="text/javaScript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.8/sweetalert2.min.js"></script>
 </body>
 
 </html>
