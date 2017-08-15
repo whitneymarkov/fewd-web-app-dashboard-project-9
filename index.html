@@ -98,28 +98,28 @@
         <div class="main-nav-sidebar sidebar-hidden" id="sideBar">
             <nav>
                 <ul class="navigation">
-                    <li class=" button current">
+                    <li class=" button current" data-tooltip="Dashboard">
                         <a href="#">
                             <svg class="small-size">
                                 <use xlink:href="#icon-dashboard"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="button">
+                    <li class="button" data-tooltip="Members">
                         <a href="#">
                             <svg class="small-size">
                                 <use xlink:href="#icon-members"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="button">
+                    <li class="button" data-tooltip="Visits">
                         <a href="#">
                             <svg class="small-size">
                                 <use xlink:href="#icon-visits"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="button">
+                    <li class="button" data-tooltip="Settings">
                         <a href="#">
                             <svg class="small-size">
                                 <use xlink:href="#icon-settings"></use>
@@ -224,7 +224,7 @@
                             <img class="rounded preview-img-size" src="img/christina-mills.jpg" alt="profile picture">
                         </div>
                         <div class="member-info">
-                            <h4>Christina Mills</h4>
+                            <h4 class="name">Christina Mills</h4>
                             <span><a href="mailto:christina.mills49@example.com">christina.mills49@example.com</a></span>
                         </div>
                         <div class="date">
@@ -236,7 +236,7 @@
                             <img class="rounded preview-img-size" src="img/liam-alvarez.jpg" alt="profile picture">
                         </div>
                         <div class="member-info">
-                            <h4>Liam Alvarez</h4>
+                            <h4 class="name">Liam Alvarez</h4>
                             <span><a href="mailto:liam.alvarez64@example.com">liam.alvarez64@example.com</a></span>
                         </div>
                         <div class="date">
@@ -248,7 +248,7 @@
                             <img class="rounded preview-img-size" src="img/phyllis-chapman.jpg" alt="profile picture">
                         </div>
                         <div class="member-info">
-                            <h4>Phyllis Chapman</h4>
+                            <h4 class="name">Phyllis Chapman</h4>
                             <span><a href="mailto:phyllis.chapman63@example.com">phyllis.chapman63@example.com7</a></span>
                         </div>
                         <div class="date">
@@ -260,7 +260,7 @@
                             <img class="rounded preview-img-size" src="img/glen-wade.jpg" alt="profile picture">
                         </div>
                         <div class="member-info">
-                            <h4>Glen Wade</h4>
+                            <h4 class="name">Glen Wade</h4>
                             <span><a href="mailto:glen.wade72@example.com">glen.wade72@example.com</a></span>
                         </div>
                         <div class="date">
@@ -278,7 +278,7 @@
                             <img class="rounded preview-img-size" src="img/clara-carlson.jpg" alt="profile picture">
                         </div>
                         <div class="member-activity">
-                            <h4>Clara Carlson</h4>
+                            <h4 class="name">Clara Carlson</h4>
                             <span class="activity">commented on Vorsiche's SEO Tips</span>
                             <span class="time">4 hours ago</span>
                         </div>
@@ -288,7 +288,7 @@
                             <img class="rounded preview-img-size" src="img/julio-howard.jpg" alt="profile picture">
                         </div>
                         <div class="member-activity">
-                            <h4>Julio Howard</h4>
+                            <h4 class="name">Julio Howard</h4>
                             <span class="activity">liked the post Facebook's Changes for 2017</span>
                             <span class="time">5 hours ago</span>
                         </div>
@@ -298,7 +298,7 @@
                             <img class="rounded preview-img-size" src="img/nathan-horton.jpg" alt="profile picture">
                         </div>
                         <div class="member-activity">
-                            <h4>Nathan Horton</h4>
+                            <h4 class="name">Nathan Horton</h4>
                             <span class="activity">commented on Facebook's Changes for 2017</span>
                             <span class="time">5 hours ago</span>
                         </div>
@@ -308,7 +308,7 @@
                             <img class="rounded preview-img-size" src="img/tracey-medina.jpg" alt="profile picture">
                         </div>
                         <div class="member-activity">
-                            <h4>Tracey Medina</h4>
+                            <h4 class="name">Tracey Medina</h4>
                             <span class="activity">posted Vorsiche's SEO Tips</span>
                             <span class="time">1 day ago</span>
                         </div>
@@ -317,6 +317,25 @@
                 <!-- Recent Activity widget starts -->
             </div>
             <!-- Members Section ends -->
+
+            <div class="forms">
+                <div class="message-user container">
+                    <form action="index.html" method="post">
+                        <h2>Message User</h2>
+                        <div class="memberList autocomplete">
+                            <input type="text" name="search" placeholder="Search for User" id="userSearch">
+                            <ul>
+                            </ul>
+                        </div>
+                        <textarea name="message" placeholder="Message for User" rows="6"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="settings container">
+
+                </div>
+
+            </div>
 
 
 

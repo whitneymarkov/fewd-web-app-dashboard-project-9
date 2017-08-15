@@ -127,3 +127,30 @@
         }
     }
 }
+
+//form widgets
+.forms {
+    @include flex($dir: column, $just: space-between);
+    @media ($brk-tablet) {
+        flex-direction: row;
+    }
+    .message-user,
+    .settings {
+        width: 100%;
+        @media ($brk-tablet) {
+            width: 49.5%;
+        }
+        @media ($brk-desktop) {
+            width: 48.5%;
+        }
+        form {
+            @include flex($dir: column);
+        }
+    }
+    .memberList {
+        ul li {
+            @include flex($dir: row, $just: flex-start);
+            align-items: center;
+        }
+    }
+}

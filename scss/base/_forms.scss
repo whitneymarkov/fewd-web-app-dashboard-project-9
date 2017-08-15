@@ -1,0 +1,74 @@
+// ======================================
+//  Form styles
+// ======================================
+
+.forms {
+    h2 {
+        font-size: 1.1em;
+        font-weight: 400;
+        margin: 0;
+        padding: 0 0 .9em 0;
+    }
+    input[type="text"],
+    textarea {
+        @include text($size: 0.9em);
+        padding: 1em;
+        border-radius: $br;
+        margin-top: 1em;
+        border: 1px solid rgba($color-medium, .1);
+        &::placeholder {
+            color: rgba($color-dark, .5);
+        }
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+        box-shadow: 0 0 0 2px rgba($color-accent-blue, .5) inset;
+        outline: none;
+    }
+    button {
+        color: $white;
+        font-weight: 400;
+        border-radius: $br;
+        border: none;
+        padding: .8em;
+        background-color: $color-accent-blue;
+        margin-top: 1em;
+    }
+}
+
+
+.message-user {
+    background-color: $white;
+    border-radius: $br;
+    @media ($brk-desktop) {
+        border-bottom: $border;
+    }
+    textarea {
+        max-width: 100%;
+    }
+
+}
+
+.memberList {
+    position: relative;
+    input {
+        min-width: 100%;
+    }
+    ul {
+        width: 100%;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        li {
+            width: 100%;
+            position: absolute;
+            list-style-type: none;
+            padding: .5em;
+            background-color: $color-light;
+            &:hover {
+                background-color: #dddfde;
+            }
+        }
+    }
+}

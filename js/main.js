@@ -15,6 +15,10 @@ const closeBtn = document.getElementsByClassName('closebtn');
 const sideBar = document.getElementById('sideBar');
 const menuBtn = document.getElementById('menuBtn');
 
+// autocomplete
+const searchField = $('.autocomplete > input');
+const memberSuggestions = $('.autocomplete > ul');
+
 //remove parent element of closebtn clicked (x)
 $('.closebtn').on('click', function() {
     this.parentElement.remove();
@@ -53,3 +57,31 @@ window.onclick = (event) => {
     }
   }
 };
+
+// members name array
+let suggestions = [];
+$('.name').each(function () {
+    suggestions.push(this.innerHTML);
+});
+
+// autocomplete
+searchField.keyup(function(){
+	var search = $(this).val();
+    //clear list before rebuilding
+	memberSuggestions.empty();
+    //loop through suggestions array
+	if (search !== '') {
+		$.each(suggestions, function(index, item){
+            //check if input provides a match to suggestions array
+            // append to ul as li
+			if (item.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+				memberSuggestions.append('<li>' + item + '</li>');
+			}
+		});
+        //click handler to assign the li content to the input field and clear the list
+		$('.autocomplete li').click(function(){
+			searchField.val($(this).html());
+			memberSuggestions.empty();
+		});
+	}
+});

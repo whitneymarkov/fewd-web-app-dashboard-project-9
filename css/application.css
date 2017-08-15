@@ -242,6 +242,36 @@ svg {
   visibility: visible;
   opacity: 1; }
 
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer; }
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out; }
+
+[data-tooltip]:before {
+  position: absolute;
+  left: 115%;
+  padding: .5em;
+  width: 5em;
+  border-radius: 4px;
+  background-color: rgba(41, 46, 47, 0.8);
+  border: solid 1px #f8f8f8;
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: .9em; }
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1; }
+
 .dark-bg {
   background-color: #fff;
   border-radius: 4px; }
@@ -437,6 +467,65 @@ svg {
         font-weight: 300;
         display: block; }
 
+.forms h2 {
+  font-size: 1.1em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 0 .9em 0; }
+.forms input[type="text"],
+.forms textarea {
+  color: #292e2f;
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-family: "Rubik", sans-serif;
+  padding: 1em;
+  border-radius: 4px;
+  margin-top: 1em;
+  border: 1px solid rgba(85, 93, 90, 0.1); }
+  .forms input[type="text"]::placeholder,
+  .forms textarea::placeholder {
+    color: rgba(41, 46, 47, 0.5); }
+.forms input:focus,
+.forms select:focus,
+.forms textarea:focus {
+  box-shadow: 0 0 0 2px rgba(84, 149, 148, 0.5) inset;
+  outline: none; }
+.forms button {
+  color: #fff;
+  font-weight: 400;
+  border-radius: 4px;
+  border: none;
+  padding: .8em;
+  background-color: #549594;
+  margin-top: 1em; }
+
+.message-user {
+  background-color: #fff;
+  border-radius: 4px; }
+  @media (min-width: 1024px) {
+    .message-user {
+      border-bottom: 3px solid rgba(85, 93, 90, 0.2); } }
+  .message-user textarea {
+    max-width: 100%; }
+
+.memberList {
+  position: relative; }
+  .memberList input {
+    min-width: 100%; }
+  .memberList ul {
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0; }
+    .memberList ul li {
+      width: 100%;
+      position: absolute;
+      list-style-type: none;
+      padding: .5em;
+      background-color: #f8f8f8; }
+      .memberList ul li:hover {
+        background-color: #dddfde; }
+
 .header-nav {
   display: flex;
   flex-direction: row-reverse;
@@ -561,5 +650,33 @@ svg {
         @media (min-width: 768px) {
           .members-widget .new-members .member .date {
             display: block; } }
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media (min-width: 768px) {
+    .forms {
+      flex-direction: row; } }
+  .forms .message-user,
+  .forms .settings {
+    width: 100%; }
+    @media (min-width: 768px) {
+      .forms .message-user,
+      .forms .settings {
+        width: 49.5%; } }
+    @media (min-width: 1024px) {
+      .forms .message-user,
+      .forms .settings {
+        width: 48.5%; } }
+    .forms .message-user form,
+    .forms .settings form {
+      display: flex;
+      flex-direction: column; }
+  .forms .memberList ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
 
 /*# sourceMappingURL=application.css.map */

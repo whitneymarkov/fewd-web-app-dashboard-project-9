@@ -1,0 +1,39 @@
+// ======================================
+//  Tooltips styles
+// ======================================
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+//hide by default
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+//position to right of element
+[data-tooltip]:before {
+  position: absolute;
+  left: 115%;
+  padding: .5em;
+  width: 5em;
+  border-radius: $br;
+  background-color: rgba($color-dark, .8);
+  border: solid 1px $color-light;
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: .9em;
+}
+
+//show content on hover
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
