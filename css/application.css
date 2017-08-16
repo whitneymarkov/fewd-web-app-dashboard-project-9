@@ -468,12 +468,17 @@ svg {
         display: block; }
 
 .forms h2 {
+  text-align: center;
   font-size: 1.1em;
   font-weight: 400;
   margin: 0;
   padding: 0 0 .9em 0; }
+  @media (min-width: 768px) {
+    .forms h2 {
+      text-align: left; } }
 .forms input[type="text"],
-.forms textarea {
+.forms textarea,
+.forms select {
   color: #292e2f;
   font-size: 0.9em;
   line-height: 1.5;
@@ -483,21 +488,14 @@ svg {
   margin-top: 1em;
   border: 1px solid rgba(85, 93, 90, 0.1); }
   .forms input[type="text"]::placeholder,
-  .forms textarea::placeholder {
+  .forms textarea::placeholder,
+  .forms select::placeholder {
     color: rgba(41, 46, 47, 0.5); }
 .forms input:focus,
 .forms select:focus,
 .forms textarea:focus {
   box-shadow: 0 0 0 2px rgba(84, 149, 148, 0.5) inset;
   outline: none; }
-.forms button {
-  color: #fff;
-  font-weight: 400;
-  border-radius: 4px;
-  border: none;
-  padding: .8em;
-  background-color: #549594;
-  margin-top: 1em; }
 
 .message-user {
   background-color: #fff;
@@ -507,6 +505,18 @@ svg {
       border-bottom: 3px solid rgba(85, 93, 90, 0.2); } }
   .message-user textarea {
     max-width: 100%; }
+  .message-user button {
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    padding: .8em;
+    background-color: rgba(84, 149, 148, 0.9);
+    margin-top: 1em;
+    transition: all 0.3s ease-in-out; }
+    .message-user button:hover {
+      cursor: pointer;
+      background-color: #549594; }
 
 .memberList {
   position: relative; }
@@ -525,6 +535,99 @@ svg {
       background-color: #f8f8f8; }
       .memberList ul li:hover {
         background-color: #dddfde; }
+
+.settings {
+  background-color: #fff;
+  border-radius: 4px; }
+  @media (min-width: 1024px) {
+    .settings {
+      border-bottom: 3px solid rgba(85, 93, 90, 0.2); } }
+  .settings form input,
+  .settings form label {
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+  .settings form .switchbox {
+    margin-bottom: 1em; }
+  .settings form button {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    padding: .8em;
+    background-color: rgba(85, 93, 90, 0.2);
+    margin-top: 1em;
+    width: 100%;
+    transition: all 0.3s ease-in-out; }
+    @media (min-width: 1024px) {
+      .settings form button {
+        width: 49.5%; } }
+  .settings form #save {
+    color: #292e2f; }
+    .settings form #save:hover {
+      background-color: rgba(85, 93, 90, 0.3); }
+  .settings form #reset {
+    background-color: rgba(227, 105, 92, 0.9); }
+    .settings form #reset:hover {
+      background-color: #e3695c; }
+
+.onoffswitch {
+  position: relative;
+  width: 50px; }
+  .onoffswitch .onoffswitch-checkbox {
+    display: none; }
+  .onoffswitch .onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 0px; }
+  .onoffswitch .onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s; }
+  .onoffswitch .onoffswitch-inner:before, .onoffswitch .onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 16px;
+    padding: 0;
+    line-height: 12px;
+    font-size: 10px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    background-clip: padding-box; }
+  .onoffswitch .onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #e3695c;
+    color: #FFFFFF; }
+  .onoffswitch .onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #CCCCCC;
+    color: #333333;
+    text-align: right; }
+  .onoffswitch .onoffswitch-switch {
+    display: block;
+    width: 15px;
+    margin: 0px;
+    background: #292e2f;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 35px;
+    transition: all 0.3s ease-in 0s; }
+  .onoffswitch .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0; }
+  .onoffswitch .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; }
 
 .swal2-modal .swal2-title {
   color: #292e2f;
@@ -683,8 +786,15 @@ svg {
         width: 48.5%; } }
     .forms .message-user form,
     .forms .settings form {
+      height: 100%;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      justify-content: space-between; }
+    .forms .message-user .switchbox,
+    .forms .settings .switchbox {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
   .forms .memberList ul li {
     display: flex;
     flex-direction: row;

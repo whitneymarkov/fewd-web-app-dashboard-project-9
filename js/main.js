@@ -70,7 +70,7 @@ $('.name').each(function () {
 
 // autocomplete
 searchField.keyup(function(){
-	var search = $(this).val();
+	let search = $(this).val();
     //clear list before rebuilding
 	memberSuggestions.empty();
     //loop through suggestions array
@@ -90,12 +90,14 @@ searchField.keyup(function(){
 	}
 });
 
+// form validation pop-up
 $('#submit').on('click', function(e) {
     e.preventDefault();
 
     let userSearch = document.querySelector('#userSearch').value;
     let messageField = document.querySelector('#message').value;
 
+    // if both fields completed return success message
     if (( userSearch.length > 0 ) && ( messageField.length > 0 )) {
         swal({
             title: '',
@@ -105,6 +107,7 @@ $('#submit').on('click', function(e) {
         })
             .catch(swal.noop)
         messageForm.reset();
+    // if one or more fields empty return warning message
     } else {
             swal({
                 title: '',
@@ -115,3 +118,49 @@ $('#submit').on('click', function(e) {
             .catch(swal.noop)
     }
 });
+
+// store settings local storage
+$('#save').click(function(e) {
+    e.preventDefault();
+
+    let email = $('#emailNotifications').prop('checked');
+    let privacy = $('#privacySettings').prop('checked');
+    let timezone = $('#timezone').val();
+
+    localStorage.setItem('emailSettings', email);
+    localStorage.setItem('privacySettings', privacy);
+    localStorage.setItem('userTimezone', timezone);
+
+    // save successful pop-up
+    swal({
+        title: '',
+        text: 'Your settings have been saved',
+        type: 'success',
+        confirmButtonColor: '#549594'
+    })
+    .catch(swal.noop)
+});
+
+// reset pop-up
+
+$('#reset').click(function(e) {
+    swal({
+        title: '',
+        text: 'Your settings have been reset. If you would like to keep these settings, hit save.',
+        type: 'info',
+        confirmButtonColor: '#549594'
+    })
+    .catch(swal.noop)
+});
+
+//show saved settings on reload
+$('#timezone').val(localStorage.getItem('userTimezone'));
+if (localStorage.getItem('emailSettings') == 'true') {
+    $('#emailNotifications').prop('checked', true);
+} else $('#emailNotifications').prop('checked', false);
+
+if (localStorage.getItem('privacySettings') == 'true') {
+    $('#privacySettings').prop('checked', true);
+} else {
+    $('#privacySettings').prop('checked', false);
+}

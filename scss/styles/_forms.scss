@@ -4,13 +4,18 @@
 
 .forms {
     h2 {
+        text-align: center;
         font-size: 1.1em;
         font-weight: 400;
         margin: 0;
         padding: 0 0 .9em 0;
+        @media ($brk-tablet) {
+            text-align: left;
+        }
     }
     input[type="text"],
-    textarea {
+    textarea,
+    select {
         @include text($size: 0.9em);
         padding: 1em;
         border-radius: $br;
@@ -26,15 +31,7 @@
         box-shadow: 0 0 0 2px rgba($color-accent-blue, .5) inset;
         outline: none;
     }
-    button {
-        color: $white;
-        font-weight: 400;
-        border-radius: $br;
-        border: none;
-        padding: .8em;
-        background-color: $color-accent-blue;
-        margin-top: 1em;
-    }
+
 }
 
 
@@ -47,7 +44,21 @@
     textarea {
         max-width: 100%;
     }
+    button {
+        color: $white;
+        font-weight: 500;
+        border-radius: $br;
+        border: none;
+        padding: .8em;
+        background-color: rgba($color-accent-blue, .9);
+        margin-top: 1em;
+        transition: all 0.3s ease-in-out;
 
+        &:hover {
+            cursor: pointer;
+            background-color: rgba($color-accent-blue, 1);
+        }
+    }
 }
 
 .memberList {
@@ -70,5 +81,98 @@
                 background-color: #dddfde;
             }
         }
+    }
+}
+
+.settings {
+    background-color: $white;
+    border-radius: $br;
+    @media ($brk-desktop) {
+        border-bottom: $border;
+    }
+    form {
+        input,
+        label {
+            font-size: .9em;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        .switchbox {
+            margin-bottom: 1em;
+        }
+        button {
+            cursor: pointer;
+            color: $white;
+            font-weight: 500;
+            border-radius: $br;
+            border: none;
+            padding: .8em;
+            background-color: rgba($color-medium, .2);
+            margin-top: 1em;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+            @media ($brk-desktop) {
+                width: 49.5%;
+            }
+        }
+        #save {
+            color: $color-dark;
+            &:hover {
+                background-color: rgba($color-medium, .3);
+            }
+        }
+        #reset {
+            background-color: rgba($color-accent-red, .9);
+            &:hover {
+                background-color: rgba($color-accent-red, 1);
+            }
+        }
+    }
+}
+
+.onoffswitch {
+    position: relative; width: 50px;
+    .onoffswitch-checkbox {
+        display: none;
+    }
+    .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #999999; border-radius: 0px;
+    }
+    .onoffswitch-inner {
+        display: block; width: 200%; margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block; float: left; width: 50%; height: 16px; padding: 0; line-height: 12px;
+        font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        box-sizing: border-box;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+    }
+    .onoffswitch-inner:before {
+        content: "";
+        padding-left: 10px;
+        background-color: #e3695c; color: #FFFFFF;
+    }
+    .onoffswitch-inner:after {
+        content: "";
+        padding-right: 10px;
+        background-color: #CCCCCC; color: #333333;
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block; width: 15px; margin: 0px;
+        background: $color-dark;
+        position: absolute; top: 0; bottom: 0;
+        right: 35px;
+        transition: all 0.3s ease-in 0s;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px;
     }
 }

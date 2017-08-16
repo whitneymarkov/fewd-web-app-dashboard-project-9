@@ -144,7 +144,11 @@
             width: 48.5%;
         }
         form {
-            @include flex($dir: column);
+            height: 100%;
+            @include flex($dir: column, $just: space-between);
+        }
+        .switchbox {
+            @include flex($dir: row, $just: space-between);
         }
     }
     .memberList {
