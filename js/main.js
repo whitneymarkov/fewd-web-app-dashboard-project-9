@@ -120,7 +120,7 @@ $('#submit').on('click', function(e) {
 });
 
 // store settings local storage
-$('#save').click(function(e) {
+$('#save').on('click', function(e) {
     e.preventDefault();
 
     let email = $('#emailNotifications').prop('checked');
